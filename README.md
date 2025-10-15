@@ -1,140 +1,128 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Fusionpact-Org/assets/main/fusionpact-hero.gif" alt="Fusionpact Hero Banner" width="350"/>
-</p>
+Full Stack Deployment, Monitoring, and CI/CD Automation
+Project Overview
+Deployed a full-stack application (frontend + backend) on a single AWS server, implemented observability using Prometheus, Grafana, Node Exporter, and automated deplyment with Jenkin CI/CD pipeline.
 
-<h1 align="center">🌟 Fusionpact DevOps Gauntlet: Assessment 2026</h1>
+1. Full Stack Deployment
+Steps Taken:
+    1. Cloned repository: fusionpact-devops-challenge.
+    2. Built Docker images for backend and frontend:
+        ◦ backend → Python 3.10 application.
+        ◦ frontend → Nginx serving HTML.
+    3. Verified Docker images:
+       docker images
+    4. Ran containers using docker run:
+        ◦ Backend exposed on port 8000.
+        ◦ Frontend exposed on port 80.
+    5. Confirmed application is accessible on public IP.
+    6. Captured screenshots for SOP.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Status-Cloud--Ready-brightgreen?style=for-the-badge&logo=googles-cloud&logoColor=white" title="Project Status"/>
-  <img src="https://img.shields.io/badge/Container-Docker--Required-blue?style=for-the-badge&logo=docker&logoColor=white" title="Docker"/>
-  <img src="https://img.shields.io/badge/CI/CD-Automation--Focus-red?style=for-the-badge&logo=githubactions&logoColor=white" title="CI/CD"/>
-  <img src="https://img.shields.io/badge/Observability-Mandatory-yellowgreen?style=for-the-badge&logo=grafana&logoColor=white" title="Monitoring"/>
-</p>
+2. Monitoring & Observability
+Tools Installed:
+    • Prometheus – Scraping backend and node metrics.
+    • Node Exporter – Installed on server for system metrics.
+    • Grafana – Dashboards for application and infrastructure metrics.
+Steps Taken:
+    1. Installed Prometheus, Node Exporter, and Grafana on the server.
+    2. Configured Prometheus to scrape:
+        ◦ localhost:9090 (Prometheus metrics)
+        ◦ localhost:9100 (Node Exporter metrics)
+    3. Created Prometheus service and started it.
+    4. Created Node Exporter service and started it.
+    5. Installed Grafana and started Grafana service.
+    6. Connected Grafana to Prometheus as data source.
+    7. Created dashboards for:
+        ◦ Infrastructure Metrics: CPU, Memory, Disk, Container usage.
+        ◦ Application Metrics: Request rate, latency, error counts.
+    8. Verified real-time data collection.
+    9. Captured screenshots for SOP.
 
----
+3. CI/CD Automation
+Steps Taken:
+    1. Installed Jenkins on the server.
+    2. Created a Jenkins pipeline (Jenkinsfile) with stages:
+        ◦ Code checkout from GitHub.
+        ◦ Build Docker images for frontend and backend.
+        ◦ Stop existing containers.
+        ◦ Run new containers.
+    3. Executed the pipeline successfully.
+    4. Verified frontend and backend after deployment.
+    5. Documented pipeline execution screenshots.
 
-<h2 align="center">🎯 MISSION BRIEFING: The Challenge</h2>
+4. Verification & Evidence
+    • Application accessible via public IP:
+        ◦ Frontend: http://<public-ip>
+        ◦ Backend: http://<public-ip>:8000
+    • Prometheus showing metrics: verified.
+    • Grafana dashboards showing real-time metrics.
+    • CI/CD pipeline logs in Jenkins: verified successful builds and deployment
+      SOP: Full Stack Deployment, Monitoring, and CI/CD Automation
+Project Overview
+Deployed a full-stack application (frontend + backend) on a single AWS server, implemented observability using Prometheus, Grafana, Node Exporter, and automated deployment with Jenkins CI/CD pipeline.
 
-<p align="center">
-Welcome to the <b>Fusionpact DevOps Gauntlet</b>! This is your final opportunity to prove your mastery of modern cloud engineering.<br/>
-Your task is to take this two-tier application stack and transform it into a <b>fault-tolerant, observable, and automated production system</b> in the cloud.
-</p>
+1. Full Stack Deployment
+Steps Taken:
+    1. Cloned repository: fusionpact-devops-challenge.
+    2. Built Docker images for backend and frontend:
+        ◦ backend → Python 3.10 application.
+        ◦ frontend → Nginx serving HTML.
+    3. Verified Docker images:
+       docker images
+    4. Ran containers using docker run:
+        ◦ Backend exposed on port 8000.
+        ◦ Frontend exposed on port 80.
+    5. Confirmed application is accessible on public IP.
+    6. Captured screenshots for SOP.
 
----
+2. Monitoring & Observability
+Tools Installed:
+    • Prometheus – Scraping backend and node metrics.
+    • Node Exporter – Installed on server for system metrics.
+    • Grafana – Dashboards for application and infrastructure metrics.
+Steps Taken:
+    1. Installed Prometheus, Node Exporter, and Grafana on the server.
+    2. Configured Prometheus to scrape:
+        ◦ localhost:9090 (Prometheus metrics)
+        ◦ localhost:9100 (Node Exporter metrics)
+    3. Created Prometheus service and started it.
+    4. Created Node Exporter service and started it.
+    5. Installed Grafana and started Grafana service.
+    6. Connected Grafana to Prometheus as data source.
+    7. Created dashboards for:
+        ◦ Infrastructure Metrics: CPU, Memory, Disk, Container usage.
+        ◦ Application Metrics: Request rate, latency, error counts.
+    8. Verified real-time data collection.
+    9. Captured screenshots for SOP.
 
-<h3 align="center">💻 Application Stack Overview</h3>
+3. CI/CD Automation
+Steps Taken:
+    1. Installed Jenkins on the server.
+    2. Created a Jenkins pipeline (Jenkinsfile) with stages:
+        ◦ Code checkout from GitHub.
+        ◦ Build Docker images for frontend and backend.
+        ◦ Stop existing containers.
+        ◦ Run new containers.
+    3. Executed the pipeline successfully.
+    4. Verified frontend and backend after deployment.
+    5. Documented pipeline execution screenshots.
 
-<p align="center">
+4. Verification & Evidence
+    • Application accessible via public IP:
+        ◦ Frontend: http://<public-ip>
+        ◦ Backend: http://<public-ip>:8000
+    • Prometheus showing metrics: verified.
+    • Grafana dashboards showing real-time metrics.
+      
+    • CI/CD pipeline logs in Jenkins: verified successful builds and deployment
 
-| Component | Technology | Directory | Key Feature |
-| :---: | :---: | :---: | :---: |
-| 🖼️ **Frontend** | HTML / CSS | `./frontend/` | Internship Landing Page (Requires lightweight serving) |
-| ⚡ **Backend** | Python **FastAPI** | `./backend/` | REST API, Data Handling, and **Prometheus `/metrics`** endpoint |
 
-</p>
+<img width="1306" height="714" alt="Screenshot from 2025-10-15 10-49-59" src="https://github.com/user-attachments/assets/f9cacb91-95fa-41bd-a71b-8fb61e5991a6" />
 
----
+<img width="1306" height="714" alt="Screenshot from 2025-10-15 11-02-31" src="https://github.com/user-attachments/assets/07c02ccc-925d-4b1e-ac89-bffa6a08559b" />
 
-<h2 align="center">🧪 Challenge Structure</h2>
+<img width="1306" height="714" alt="Screenshot from 2025-10-15 12-03-57" src="https://github.com/user-attachments/assets/0538f799-f81a-4321-a2e0-ed1c81caf741" />
 
-<p align="center">
-The assignment is divided into <b>3 levels</b>. Complete all tasks in each level to qualify.
-</p>
+<img width="1306" height="714" alt="Screenshot from 2025-10-15 12-36-12" src="https://github.com/user-attachments/assets/60fce9f3-3923-4cd3-bfd2-5d8999f4f461" />
 
----
+<img width="1306" height="714" alt="Screenshot from 2025-10-15 13-04-41" src="https://github.com/user-attachments/assets/a46e54af-49c1-449f-a02f-b873a602bc6a" />
 
-<h3 align="center">🥇 Level 1 – Cloud Deployment (30%)</h3>
-
-**Objective:** Deploy the full stack on a cloud platform of your choice.
-
-**Requirements:**
-- Containerize both frontend and backend using Docker.
-- Create a `docker-compose.yml` to orchestrate the services.
-- Ensure data persistence (volume or external database).
-- Deploy the application on a public cloud (AWS, GCP, or Azure).
-- Both frontend and backend must be accessible publicly.
-
-**Deliverables:**
-- `Dockerfile` for frontend and backend  
-- `docker-compose.yml`  
-- Screenshot of the deployed application *(Document this in your SOP)*
-
----
-
-<h3 align="center">🥈 Level 2 – Monitoring & Observability (30%)</h3>
-
-**Objective:** Implement complete observability for the deployed application.
-
-**Requirements:**
-- Set up **Prometheus** to scrape backend metrics from `/metrics`.
-- Deploy **Grafana** and create dashboards for:
-  - Infrastructure metrics: CPU, memory, disk, container usage.
-  - Application metrics: request rate, latency, error counts.
-- Dashboards must visualize real-time data from the deployed services. *(Document this in your SOP)*
-
-**Deliverables:**
-- `prometheus.yml` configuration file  
-- Screenshots of Grafana dashboards (Infrastructure + Application) *(in SOP)*
-
----
-
-<h3 align="center">🥉 Level 3 – CI/CD Automation (30%)</h3>
-
-**Objective:** Automate the build and deployment workflow.
-
-**Requirements:**
-- Implement a CI/CD pipeline using **Jenkins**, **GitHub Actions**, or **GitLab CI/CD**.
-- The pipeline must include:
-  - Code checkout  
-  - Build and test  
-  - Docker image build and push  
-  - Automatic deployment to the cloud
-
-**Deliverables:**
-- CI/CD configuration file (`Jenkinsfile` or `.github/workflows/main.yml`)
-
----
-
-<h3 align="center">📑 Submission Requirements (10%)</h3>
-
-**Instructions:**
-- Fork this repository and push your complete solution.
-- Provide a **SOP (Standard Operating Procedure)** — **do NOT** push the SOP to GitHub.  
-- Submit the SOP **via email**.
-
-**Submission Checklist:**
-- ✅ GitHub repository URL  
-- ✅ SOP PDF (attached in email)  
-- ✅ Submit the Google Form once the tasks are complete
-
----
-
-<h3 align="center">📊 Evaluation Criteria</h3>
-
-<p align="center">
-
-| Category | Weight |
-| :---: | :---: |
-| ☁️ Cloud Deployment | 30% |
-| 📊 Monitoring & Observability | 30% |
-| 🔁 CI/CD Automation | 30% |
-| 📄 Documentation & SOP | 10% |
-
-</p>
-
-<p align="center">
-  ⚠️ <b>FINAL CHECK:</b> Submissions will be rejected if the deployment is not in the cloud or if the SOP is missing.
-</p>
-
----
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Fusionpact-Org/assets/main/devops-fun.gif" alt="DevOps Fun GIF" width="400"/>
-</p>
-
-<h3 align="center">🚀 SHOW US YOUR BEST WORK</h3>
-
-<p align="center">
-Showcase <b>reliability, scalability, and automated cloud deployments</b> like a pro.  
-This is your chance to prove you can build real-world, production-ready systems.
-</p>
+<img width="1306" height="714" alt="Screenshot from 2025-10-15 12-37-22" src="https://github.com/user-attachments/assets/061565a6-e61d-4a3d-ade6-76af39cb746a" />
